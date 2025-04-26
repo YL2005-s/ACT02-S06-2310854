@@ -8,6 +8,6 @@ public class CuentaSueldoFactory implements CuentaFactory {
 
     @Override
     public CuentaAhorro crearCuenta(double monto) {
-        return new CuentaPlazoFijo(monto);
+        return new CuentaSueldo(monto);
     }
 }
