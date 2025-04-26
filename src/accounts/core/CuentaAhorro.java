@@ -5,7 +5,6 @@ public abstract class CuentaAhorro {
     protected double monto;
     protected boolean pagaMantenimiento = false;
     protected int retirosPermitidosATM;
-    protected boolean esDigital = false;
     protected int cantidadTitulares = 1;
     protected int plazoMeses;
     protected String tipo;
@@ -32,10 +31,6 @@ public abstract class CuentaAhorro {
 
     public int getRetirosPermitidosATM() {
         return retirosPermitidosATM;
-    }
-
-    public boolean isEsDigital() {
-        return esDigital;
     }
 
     public int getCantidadTitulares() {

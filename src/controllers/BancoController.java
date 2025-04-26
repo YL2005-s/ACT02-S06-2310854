@@ -10,15 +10,17 @@ import core.Controller;
 import models.BancoModel;
 import view.BancoView;
 
+import javax.swing.*;
 import java.util.HashMap;
 import java.util.Map;
 
 public class BancoController extends Controller {
+    private BancoView bancoView;
     private final Map<String, CuentaFactory> accountFactories = new HashMap<>();
 
     @Override
     public void run() {
-        BancoView bancoView = new BancoView(this, mainFrame);
+        bancoView = new BancoView(this, mainFrame);
         addView("BancoView", bancoView);
         mainFrame.setVisible(true);
 
@@ -32,16 +34,19 @@ public class BancoController extends Controller {
         accountFactories.put("Plazo Fijo", new PlazoFijoFactory());
     }
 
-    public CuentaAhorro crearCuenta(String tipoCuenta, double monto) {
-        BancoModel bancoModel = new BancoModel();
+    public CuentaAhorro saveAccount(String tipoCuenta, double monto) {
         CuentaFactory factory = accountFactories.get(tipoCuenta);
-
-        if (factory == null) {
-            throw new IllegalArgumentException("Tipo de cuenta no registrado: " + tipoCuenta);
-        }
+        if (factory == null) throw new IllegalArgumentException("Tipo de cuenta no registrado: " + tipoCuenta);
 
         CuentaAhorro cuenta = factory.crearCuenta(monto);
-        bancoModel.saveAccount(cuenta);
+        try {
+            BancoModel bancoModel = new BancoModel();
+            bancoModel.attach(bancoView);
+            bancoModel.saveAccount(cuenta);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "ERROR", e.getMessage(), JOptionPane.ERROR_MESSAGE);
+        }
+
         return cuenta;
     }
 }

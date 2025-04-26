@@ -3,6 +3,7 @@ package accounts.cuentasahorro.digital;
 import accounts.core.CuentaAhorro;
 
 public class CuentaDigital extends CuentaAhorro {
+    private boolean esDigital = true;
 
     public CuentaDigital(double monto) {
         super(monto);
@@ -10,7 +11,16 @@ public class CuentaDigital extends CuentaAhorro {
         this.tasaInteres = 3.0;
         this.pagaMantenimiento = true;
         this.retirosPermitidosATM = 3;
-        this.esDigital = true;
         this.plazoMeses = 0;
+    }
+
+    public boolean isEsDigital() {
+        return esDigital;
+    }
+
+    @Override
+    public String getDetalles() {
+        String detalles = super.getDetalles();
+        return detalles + "\nCuenta 100% Digital.";
     }
 }

@@ -57,3 +57,30 @@ Mantenimiento: No
 Retiros ATM: 0/mes
 Plazo: 6 meses
 -------------------------------
+=== Detalles de la Cuenta ===
+Tipo: Plazo Fijo
+Tasa: 6.0%
+Saldo: $100.0
+Cantidad de titulares: 1
+Mantenimiento: No
+Retiros ATM: 0/mes
+Plazo: 6 meses
+-------------------------------
+=== Detalles de la Cuenta ===
+Tipo: Plazo Fijo
+Tasa: 6.0%
+Saldo: $100.0
+Cantidad de titulares: 1
+Mantenimiento: No
+Retiros ATM: 0/mes
+Plazo: 6 meses
+-------------------------------
+=== Detalles de la Cuenta ===
+Tipo: Ahorro Digital
+Tasa: 3.0%
+Saldo: $100.0
+Cantidad de titulares: 1
+Mantenimiento: Sí
+Retiros ATM: 3/mes
+Cuenta 100% Digital.
+-------------------------------
