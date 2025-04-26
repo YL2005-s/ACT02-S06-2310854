@@ -87,8 +87,13 @@ public class BancoView extends JPanel implements View {
             try {
                 String tipo = (String) cbx_tipoCuenta.getSelectedItem();
                 double monto = Double.parseDouble(tf_monto.getText());
-                CuentaAhorro cuenta = bancoController.saveAccount(tipo, monto);
 
+                if (monto < 200.0) {
+                    JOptionPane.showMessageDialog(this, "El monto debe ser al menos 200 soles.", "Error", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                CuentaAhorro cuenta = bancoController.saveAccount(tipo, monto);
                 if (cuenta != null) {
                     ta_detalles.setText(cuenta.getDetalles());
                 } else {
