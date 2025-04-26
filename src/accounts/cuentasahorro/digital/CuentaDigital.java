@@ -3,7 +3,7 @@ package accounts.cuentasahorro.digital;
 import accounts.core.CuentaAhorro;
 
 public class CuentaDigital extends CuentaAhorro {
-    private boolean esDigital = true;
+    private final boolean esDigital = true;
 
     public CuentaDigital(double monto) {
         super(monto);

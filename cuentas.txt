@@ -84,3 +84,12 @@ Mantenimiento: Sí
 Retiros ATM: 3/mes
 Cuenta 100% Digital.
 -------------------------------
+=== Detalles de la Cuenta ===
+Tipo: Ahorro para Menores
+Tasa: 0.5%
+Saldo: $100.0
+Cantidad de titulares: 2
+Mantenimiento: No
+Retiros ATM: 0/mes
+Cuenta requiere presencia de un Tutor.
+-------------------------------

@@ -4,7 +4,8 @@ import accounts.core.CuentaAhorro;
 import accounts.core.CuentaFactory;
 import accounts.cuentasahorro.digital.CuentaDigitalFactory;
 import accounts.cuentasahorro.mancomunada.CuentaMancomunadaFactory;
-import accounts.cuentasahorro.plazo.PlazoFijoFactory;
+import accounts.cuentasahorro.menores.CuentaMenoresFactory;
+import accounts.cuentasahorro.plazo.CuentaPlazoFijoFactory;
 import accounts.cuentasahorro.sueldo.CuentaSueldoFactory;
 import core.Controller;
 import models.BancoModel;
@@ -31,7 +32,8 @@ public class BancoController extends Controller {
         accountFactories.put("Ahorro Sueldo", new CuentaSueldoFactory());
         accountFactories.put("Ahorro Digital", new CuentaDigitalFactory());
         accountFactories.put("Ahorro Mancomunada", new CuentaMancomunadaFactory());
-        accountFactories.put("Plazo Fijo", new PlazoFijoFactory());
+        accountFactories.put("Plazo Fijo", new CuentaPlazoFijoFactory());
+        accountFactories.put("Ahorro para Menores", new CuentaMenoresFactory());
     }
 
     public CuentaAhorro saveAccount(String tipoCuenta, double monto) {

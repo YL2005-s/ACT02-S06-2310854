@@ -61,7 +61,8 @@ public class BancoView extends JPanel implements View {
                 "Ahorro Sueldo",
                 "Ahorro Digital",
                 "Ahorro Mancomunada",
-                "Plazo Fijo"
+                "Plazo Fijo",
+                "Ahorro para Menores"
         });
         panelSuperior.add(cbx_tipoCuenta);
     }

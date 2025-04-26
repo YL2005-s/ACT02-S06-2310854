@@ -2,9 +2,9 @@ package accounts.cuentasahorro.plazo;
 
 import accounts.core.CuentaAhorro;
 
-public class PlazoFijo extends CuentaAhorro {
+public class CuentaPlazoFijo extends CuentaAhorro {
 
-    public PlazoFijo(double monto) {
+    public CuentaPlazoFijo(double monto) {
         super(monto);
         this.tipo = "Plazo Fijo";
         this.tasaInteres = 6.0;
